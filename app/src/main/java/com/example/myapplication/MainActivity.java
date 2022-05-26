@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         database = openOrCreateDatabase("DataBaseDatSan.db", MODE_PRIVATE, null);
         btn_CapNhat = findViewById(R.id.btn_CapNhat);
         btn_CaiDatTaiKhoan = findViewById(R.id.btn_CaiDatTaiKhoan);
+        btn_CaiDatTaiKhoan = findViewById(R.id.btn_CaiDatTaiKhoan);
         txt_Ten = findViewById(R.id.txt_Ten);
         txt_Sdt= findViewById(R.id.txt_Sdt);
         displayInfor();
