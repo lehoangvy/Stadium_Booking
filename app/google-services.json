@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "932866220029",
+    "project_id": "book-stadium",
+    "storage_bucket": "book-stadium.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:932866220029:android:e4649e89b9fdc2f1fd0394",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "932866220029-f4mn36b817pfhu8fseldb1fqospt26lu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4vS5qcfkGpd2BPDf4n1myC6Twy862r50"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "932866220029-f4mn36b817pfhu8fseldb1fqospt26lu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
