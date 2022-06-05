@@ -9,7 +9,7 @@
     android:paddingTop="10px"
     android:paddingBottom="10px"
     android:paddingLeft="20px"
-    tools:context=".ThayDoiSDT">
+    tools:context=".DoiMatKhau">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -29,17 +29,18 @@
             android:layout_height="43dp"
             android:background="#FFFFFF"
             android:gravity="center"
-            android:text="Nhập số điện thoại của bạn"
+            android:text="Đổi mật khẩu"
             android:textAlignment="center"
             android:textColor="#3F51B5"
             android:textSize="20sp"
             android:textStyle="bold" />
     </LinearLayout>
+
     <TextView
         android:id="@+id/textView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Số điện thoại mới"
+        android:text="Nhập mật khẩu cũ"
         android:textSize="16sp" />
 
     <EditText
@@ -49,15 +50,32 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:textSize="14sp" />
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nhập mật khẩu của bạn"
+        android:text="Nhập mật khẩu mới"
         android:textSize="16sp" />
 
     <EditText
         android:id="@+id/edt_MatKhauMoi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:text=""
+        android:textSize="14sp"
+        tools:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nhập lại mật khẩu"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/edt_NhapLaiMK"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"

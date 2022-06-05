@@ -66,9 +66,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
         android:text="lehoangvy2105@gmail.com"
-        android:textSize="14sp" />
+        android:textSize="14sp"
+        tools:inputType="textWebEmailAddress" />
 
     <TextView
         android:id="@+id/textView10"

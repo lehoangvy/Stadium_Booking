@@ -19,8 +19,8 @@ public class ThayDoiSDT extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_thay_doi_sdt);
         btn_back = findViewById(R.id.btn_back);
-        edt_SDT = findViewById(R.id.edt_SDT);
-        edt_MatKhau = findViewById(R.id.edt_MatKhau);
+        edt_SDT = findViewById(R.id.edt_MatKhauCu);
+        edt_MatKhau = findViewById(R.id.edt_MatKhauMoi);
         btn_Luu = findViewById(R.id.btn_Luu);
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override

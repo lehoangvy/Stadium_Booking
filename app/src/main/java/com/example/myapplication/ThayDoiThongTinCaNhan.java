@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 public class ThayDoiThongTinCaNhan extends AppCompatActivity {
     Spinner spinner;
@@ -76,11 +77,14 @@ public class ThayDoiThongTinCaNhan extends AppCompatActivity {
             gt=1;
         }else
             gt=0;
-
-        Cursor c = MainActivity.database.rawQuery("update ThongTinNguoiDung set TenNguoiDung='"+ edt_Ten.getText().toString() +"',Email='"+edt_Email.getText().toString()+"',NgaySinh='"+ edt_NgaySinh.getText().toString()+"' where TaiKhoan='huyhihi'",null);
-        c.moveToFirst();
-        c.close();
-
-
+        try {
+            Cursor c = MainActivity.database.rawQuery("update ThongTinNguoiDung set TenNguoiDung='" + edt_Ten.getText().toString() + "',Email='" + edt_Email.getText().toString() + "',NgaySinh='" + edt_NgaySinh.getText().toString() + "',GioiTinh=" + gt + " where TaiKhoan='huyhihi'", null);
+            c.moveToFirst();
+            c.close();
+        }
+        catch (Exception e){
+            Toast.makeText(ThayDoiThongTinCaNhan.this, "Cập nhật thất bại", Toast.LENGTH_SHORT).show();
+        }
+        Toast.makeText(ThayDoiThongTinCaNhan.this, "Cập nhật thành công", Toast.LENGTH_SHORT).show();
     }
 }

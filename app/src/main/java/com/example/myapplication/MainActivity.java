@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     String DB_PATH_SUFFIX = "/databases/";
     public static SQLiteDatabase database = null;
     public static String DATABASE_NAME = "DataBaseDatSan.db";
-
+    public static String taiKhoan = "huyhihi";
     Button btn_CapNhat;
     Button btn_DangXuat;
     ImageButton btn_CaiDatTaiKhoan;
