@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical"
     android:paddingLeft="20px"
-    android:paddingTop="10px"
     android:paddingRight="20px"
+    android:paddingTop="10px"
     android:paddingBottom="10px"
-    tools:context=".ThayDoiThongTinCaNhan">
+    tools:context=".CauHoiThuongGap">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -30,27 +30,26 @@
             android:layout_height="43dp"
             android:background="#FFFFFF"
             android:gravity="center"
-            android:text="Liên hệ F-Connect"
+            android:text="Câu hỏi thường gặp"
             android:textAlignment="center"
             android:textColor="#3F51B5"
             android:textSize="20sp"
             android:textStyle="bold" />
-
     </LinearLayout>
 
     <ImageView
         android:id="@+id/imageView15"
-        android:layout_width="142dp"
-        android:layout_height="154dp"
-        android:layout_weight="1"
-        app:srcCompat="@drawable/logo"
-        android:layout_gravity="center" />
+        android:layout_width="224dp"
+        android:layout_height="149dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/logo" />
 
     <TextView
         android:id="@+id/textView15"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Liên hệ với F-Connect"
+        android:padding="20px"
+        android:text="F-Connect sẵn sàng hỗ trợ"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold" />
@@ -60,6 +59,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Mọi thắc mắc trong quá trình sử dụng F-Connect xin vui lòng liên hệ :"
+        android:padding="20px"
         android:textSize="14sp" />
 
     <TextView
@@ -67,40 +67,45 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Tổng đài chăm sóc khách hàng F-Connect"
+        android:padding="20px"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="match_parent"
+        android:padding="20px"
+        android:layout_height="wrap_content"
+        android:text="Email: fconnect@gmail.com" />
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="F-Connect có những hình thức thanh toán nào?"
+        android:padding="20px"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="match_parent"
+        android:padding="20px"
+        android:layout_height="wrap_content"
+        android:text="Thanh toán bằng Tiền mặt và ATM" />
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hủy sân có thể hoàn tiền hay không ?"
+        android:padding="20px"
         android:textSize="16sp"
         android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView20"
         android:layout_width="match_parent"
+        android:padding="20px"
         android:layout_height="wrap_content"
-        android:text="Email: fconnect@gmail.com" />
-
-    <TextView
-        android:id="@+id/textView21"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Hotline: 0123456789" />
-
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Tổng đài hỗ trợ đối tác khách hàng"
-        android:textSize="16sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Hotline: 0792.160.560" />
-
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="F-Connect hân hạnh được phục vụ quý khách" />
-
+        android:text="Tất nhiên là có rồi nhưng bạn sẽ được hoàn lại 80%" />
 
 </LinearLayout>

@@ -31,9 +31,9 @@ public class CapNhatHoSo extends AppCompatActivity {
         btn_back = findViewById(R.id.btn_back);
         btn_ThayCaNhan = findViewById(R.id.btn_ThayCaNhan);
         btn_ThaySDT = findViewById(R.id.btn_ThaySDT);
-        txt_hs_Ten_GT = findViewById(R.id.txt_hs_Ten_GT);
-        txt_hs_NgaySinh = findViewById(R.id.txt_hs_NgaySinh);
-        txt_hs_Email = findViewById(R.id.txt_hs_Email);
+        txt_hs_Ten_GT = findViewById(R.id.btn_CongDong);
+        txt_hs_NgaySinh = findViewById(R.id.btn_QuanLyThe);
+        txt_hs_Email = findViewById(R.id.btn_YeuThich);
         txt_hs_SDT = findViewById(R.id.txt_hs_SDT);
         btn_ThayAnhDaiDien = findViewById(R.id.btn_ThayAnhDaiDien);
         img_avt = findViewById(R.id.img_avt);

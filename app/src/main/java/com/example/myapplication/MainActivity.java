@@ -25,9 +25,8 @@ public class MainActivity extends AppCompatActivity {
     public static SQLiteDatabase database = null;
     public static String DATABASE_NAME = "DataBaseDatSan.db";
     public static String taiKhoan = "huyhihi";
-    Button btn_CapNhat;
-    Button btn_DangXuat;
-    ImageButton btn_CaiDatTaiKhoan,btn_LienHe;
+    ImageButton btn_Qua;
+    Button btn_CapNhat,btn_DangXuat,btn_CaiDat,btn_LienHe,btn_QuanLyThe,btn_YeuThich,btn_CauHoi,btn_CongDong;
     TextView txt_Ten,txt_Sdt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,12 +34,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         processCopy();
         database = openOrCreateDatabase("DataBaseDatSan.db", MODE_PRIVATE, null);
-        btn_CapNhat = findViewById(R.id.btn_CapNhat);
-        btn_CaiDatTaiKhoan = findViewById(R.id.btn_CaiDatTaiKhoan);
-        btn_CaiDatTaiKhoan = findViewById(R.id.btn_CaiDatTaiKhoan);
-        btn_LienHe = findViewById(R.id.btn_LienHe);
-        txt_Ten = findViewById(R.id.txt_Ten);
-        txt_Sdt= findViewById(R.id.txt_Sdt);
+        thamChieu();
         displayInfor();
         btn_CapNhat.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,14 +67,27 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btn_CaiDatTaiKhoan.setOnClickListener(new View.OnClickListener() {
+        btn_CaiDat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent myintent = new Intent(MainActivity.this, CaiDatTaiKhoan.class);
                 startActivity(myintent);
             }
         });
-
+        btn_CauHoi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myintent = new Intent(MainActivity.this, CauHoiThuongGap.class);
+                startActivity(myintent);
+            }
+        });
+        btn_QuanLyThe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myintent = new Intent(MainActivity.this, QuanLyThe.class);
+                startActivity(myintent);
+            }
+        });
         btn_LienHe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -135,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void displayInfor(){
-        Cursor c = database.rawQuery("Select * from ThongTinNguoiDung where TaiKhoan='+"+taiKhoan+"'",null);
+        Cursor c = database.rawQuery("Select * from ThongTinNguoiDung where TaiKhoan='"+taiKhoan+"'",null);
         c.moveToFirst();
         txt_Ten.setText(c.getString(1));
         txt_Sdt.setText(c.getString(2));
@@ -145,5 +152,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         displayInfor();
+    }
+    public void thamChieu(){
+        btn_CapNhat = findViewById(R.id.btn_CapNhat);
+        btn_CaiDat= findViewById(R.id.btn_CaiDat);
+        btn_LienHe = findViewById(R.id.btn_LienHe);
+        txt_Ten = findViewById(R.id.txt_Ten);
+        txt_Sdt= findViewById(R.id.txt_Sdt);
+        btn_CauHoi = findViewById(R.id.btn_CauHoi);
+        btn_QuanLyThe = findViewById(R.id.btn_QuanLyThe);
+        btn_YeuThich = findViewById(R.id.btn_YeuThich);
     }
 }
