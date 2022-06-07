@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     public static String taiKhoan = "huyhihi";
     Button btn_CapNhat;
     Button btn_DangXuat;
-    ImageButton btn_CaiDatTaiKhoan;
+    ImageButton btn_CaiDatTaiKhoan,btn_LienHe;
     TextView txt_Ten,txt_Sdt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         btn_CapNhat = findViewById(R.id.btn_CapNhat);
         btn_CaiDatTaiKhoan = findViewById(R.id.btn_CaiDatTaiKhoan);
         btn_CaiDatTaiKhoan = findViewById(R.id.btn_CaiDatTaiKhoan);
+        btn_LienHe = findViewById(R.id.btn_LienHe);
         txt_Ten = findViewById(R.id.txt_Ten);
         txt_Sdt= findViewById(R.id.txt_Sdt);
         displayInfor();
@@ -80,6 +81,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btn_LienHe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myintent = new Intent(MainActivity.this, LienHe.class);
+                startActivity(myintent);
+            }
+        });
 
     }
     private void processCopy (){
@@ -127,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void displayInfor(){
-        Cursor c = database.rawQuery("Select * from ThongTinNguoiDung where TaiKhoan='huyhihi'",null);
+        Cursor c = database.rawQuery("Select * from ThongTinNguoiDung where TaiKhoan='+"+taiKhoan+"'",null);
         c.moveToFirst();
         txt_Ten.setText(c.getString(1));
         txt_Sdt.setText(c.getString(2));
